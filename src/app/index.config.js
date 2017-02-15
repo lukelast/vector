@@ -37,12 +37,12 @@
             'port': 443,  // PMWEBD port
             'hostspec': 'localhost', // Default PMCD hostspec
             'interval': '2', // Default update interval in seconds
-            'window': '2', // Default graph time window in minutes
+            'window': '5', // Default graph time window in minutes
             'enableCpuFlameGraph': false, // Enable CPU flame graph (requires extra PMDA)
             'enableContainerWidgets': true, // Enable container widgets
-            'disableHostspecInput': false, // Disable hostspec input
-            'disableContainerFilter': false, // Disable container id filter input
-            'disableContainerSelect': false, // Disable container name drop down select
+            'disableHostspecInput': true, // Disable hostspec input
+            'disableContainerFilter': true, // Disable container id filter input
+            'disableContainerSelect': true, // Disable container name drop down select
             'containerSelectOverride': true, // Overrides requireContainerFilter widget option
             'useCgroupId': false, // Use container cgroup id instead of container name
             'expandHostname': false, // Automatically expand hostname input when application opens
