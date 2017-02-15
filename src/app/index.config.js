@@ -33,8 +33,8 @@
     angular
         .module('vector')
         .constant('config', {
-            'protocol': 'http', // PMWEBD protocol (http or https)
-            'port': 44323,  // PMWEBD port
+            'protocol': 'https', // PMWEBD protocol (http or https)
+            'port': 443,  // PMWEBD port
             'hostspec': 'localhost', // Default PMCD hostspec
             'interval': '2', // Default update interval in seconds
             'window': '2', // Default graph time window in minutes

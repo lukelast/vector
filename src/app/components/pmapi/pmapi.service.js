@@ -34,8 +34,9 @@
             settings.params.polltimeout = params.pollTimeout.toString();
             settings.params.exclusive = 1;	// clients have exclusive contexts; default in later pcp versiosn
             settings.timeout = 5000;
+            settings.withCredentials = true;
 
-            return $http(settings)
+          return $http(settings)
                 .then(function (response) {
                     if (response.data.context) {
                         return response.data.context;
@@ -84,6 +85,7 @@
             settings.method = 'GET';
             settings.url = baseURI + '/pmapi/' + context + '/_fetch';
             settings.params = {};
+            settings.withCredentials = true;
 
             if (angular.isDefined(pmids) && pmids !== null && pmids.length > 0)  {
                 settings.params.pmids = pmids.join(',');
@@ -131,6 +133,7 @@
             settings.method = 'GET';
             settings.url = baseURI + '/pmapi/' + context + '/_indom';
             settings.params = {indom: indom}; // required
+            settings.withCredentials = true;
 
             if (angular.isDefined(instances) && instances !== null) {
                 settings.params.instance = instances.join(',');
@@ -160,6 +163,7 @@
             settings.method = 'GET';
             settings.url = baseURI + '/pmapi/' + context + '/_indom';
             settings.params = {name: name};
+            settings.withCredentials = true;
 
             if (angular.isDefined(instances) && instances !== null) {
                 settings.params.instance = instances.join(',');
