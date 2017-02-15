@@ -21,7 +21,6 @@ body {
 }
 
 .main-container {
-  padding-top: 46px;
   will-change: transform;
 }
 
